@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RustBot Autonomous Engine — Project Briefing | Areeb Azhar</title>
+  <meta name="description" content="Technical case study on RustBot — a high-performance async AI chatbot backend and local memory engine written in Pure Rust with Tokio, Axum, and SQLite." />
+  <meta name="theme-color" content="#050505" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body class="case-page">
+
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Case Navigation -->
+  <nav class="case-nav">
+    <div class="case-identity">
+      <a class="masthead-logo interactive" href="../index.html" aria-label="Home">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 3"/>
+          <path d="M12 28L20 12L28 28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="15" y1="23" x2="25" y2="23" stroke="currentColor" stroke-width="1.8"/>
+        </svg>
+      </a>
+      <a class="case-back-link interactive" href="../index.html#work">
+        <span>← BACK TO PROJECTS</span>
+      </a>
+      <div class="case-indicator">
+        <span>PROJECTS / <b>05</b></span>
+        <span style="margin-left: 10px; color: var(--muted);">SYSTEMS PROGRAMMING &amp; APPLIED AI</span>
+      </div>
+    </div>
+
+    <div class="masthead-right">
+      <button type="button" class="sound-toggle-btn interactive" data-sound-toggle aria-pressed="false" title="Audio feedback toggle">
+        <span class="sound-wave">
+          <span class="sound-bar"></span>
+          <span class="sound-bar"></span>
+          <span class="sound-bar"></span>
+        </span>
+        <span class="sound-label">SOUND OFF</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Case Hero -->
+  <header class="case-hero">
+    <div class="case-route-label">
+      <span>05 // CASE STUDY BRIEFING</span>
+    </div>
+
+    <h1 class="case-hero-title">
+      <span class="masked-line"><span class="masked-inner">RustBot</span></span>
+      <span class="masked-line"><span class="masked-inner">Engine.</span></span>
+    </h1>
+
+    <p class="case-hero-deck">
+      A high-throughput, memory-safe conversational AI architecture built in pure Rust. Delivers sub-millisecond route handling, per-user database isolation, Argon2id encryption, and a local fuzzy vector memory store.
+    </p>
+
+    <div class="case-hero-role">
+      <span>Role: Backend Systems Architect &amp; Rust Engineer</span>
+    </div>
+
+    <!-- Context Matrix -->
+    <div class="case-context-matrix">
+      <dl class="context-grid">
+        <div class="context-item">
+          <dt>SYSTEM CLASS</dt>
+          <dd>High-Concurrency Backend</dd>
+        </div>
+        <div class="context-item">
+          <dt>TIMELINE</dt>
+          <dd>2026 // Production Architecture</dd>
+        </div>
+        <div class="context-item">
+          <dt>CORE STACK</dt>
+          <dd>Pure Rust · Tokio · Axum · SQLite · Argon2id</dd>
+        </div>
+        <div class="context-item">
+          <dt>REPOSITORY</dt>
+          <dd>
+            <a class="interactive" href="https://github.com/AREEB-AZHAR/RustBot" target="_blank" rel="noopener noreferrer">
+              <span>github.com/AREEB-AZHAR/RustBot</span> ↗
+            </a>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </header>
+
+  <!-- Case Story System -->
+  <main class="case-story-system">
+    
+    <!-- Act 01: The Starting Point -->
+    <section class="case-act">
+      <span class="act-label">01 // THE STARTING POINT</span>
+      <h2 class="act-title">
+        Interpreted runtimes crumble under load.<br>Memory safety without garbage collection is essential.
+      </h2>
+      <p class="act-copy">
+        Most conversational AI wrappers and chatbot services are written in Python or Node.js. While convenient for prototyping, they suffer from Global Interpreter Locks (GIL), unpredictable garbage collection pauses, and substantial baseline memory footprints when serving concurrent agentic threads.
+      </p>
+      <p class="act-copy">
+        <b>RustBot</b> was architected from the bare metal up in pure Rust. Using Tokio's multi-threaded work-stealing runtime and Axum's zero-cost type-safe routing, the system processes thousands of simultaneous requests on a fraction of the hardware footprint of standard backends.
+      </p>
+    </section>
+
+    <!-- Code & Architecture Showcase -->
+    <div class="diagram-box">
+      <div class="diagram-header">SYSTEM ARCHITECTURE PIPELINE // RUST TOKIO ENGINE</div>
+      <div style="font-family: var(--font-mono); font-size: 13px; line-height: 1.8; color: var(--paper-dim);">
+        <span style="color: var(--muted-dark)">// Concurrent memory-safe context extraction</span><br>
+        <span style="color: #c5a880">pub async fn</span> <span style="color: var(--paper-bright)">query_agent_stream</span>(<br>
+        &nbsp;&nbsp;State(state): <span style="color: #8e8d86">State&lt;AppState&gt;</span>,<br>
+        &nbsp;&nbsp;Extension(claims): <span style="color: #8e8d86">Extension&lt;UserClaims&gt;</span>,<br>
+        &nbsp;&nbsp;Json(payload): <span style="color: #8e8d86">Json&lt;ChatRequest&gt;</span>,<br>
+        ) -&gt; <span style="color: #c5a880">Result</span>&lt;<span style="color: #8e8d86">Sse&lt;impl Stream&gt;</span>, <span style="color: #8e8d86">AppError</span>&gt; {<br>
+        &nbsp;&nbsp;<span style="color: var(--muted-dark)">// Sub-millisecond fuzzy memory retrieval</span><br>
+        &nbsp;&nbsp;<span style="color: #c5a880">let</span> context = state.memory_store.search_similar(&amp;payload.query, 5).<span style="color: #c5a880">await</span>?;<br>
+        &nbsp;&nbsp;<span style="color: #55c777;">// Zero GC allocation, streaming chunks via SSE</span><br>
+        &nbsp;&nbsp;Ok(Sse::new(state.stream_inference(payload, context).<span style="color: #c5a880">await</span>?))<br>
+        }
+      </div>
+    </div>
+
+    <!-- Act 02: Architecture in Practice -->
+    <section class="case-act">
+      <span class="act-label">02 // ARCHITECTURE IN PRACTICE</span>
+      <h2 class="act-title">Defensive systems programming from socket to disk.</h2>
+      
+      <div class="case-practice-grid">
+        <aside class="sticky-concept-aside">
+          <ul class="concept-index-list">
+            <li><a class="concept-index-link active" href="#step-01">01 / Tokio Work-Stealing</a></li>
+            <li><a class="concept-index-link" href="#step-02">02 / Per-User Isolation</a></li>
+            <li><a class="concept-index-link" href="#step-03">03 / Fuzzy Vector Memory</a></li>
+          </ul>
+        </aside>
+
+        <div class="sequence-steps">
+          <article class="sequence-step" id="step-01">
+            <span class="sequence-step-num">STEP 01</span>
+            <h3 class="sequence-step-title">Tokio Multi-Threaded Task Scheduler</h3>
+            <p class="act-copy">
+              Incoming TCP connections are multiplexed onto lightweight green threads managed by Tokio's work-stealing scheduler. Zero context-switching overhead ensures that even during high-burst spikes, latency remains flat and predictable.
+            </p>
+          </article>
+
+          <article class="sequence-step" id="step-02">
+            <span class="sequence-step-num">STEP 02</span>
+            <h3 class="sequence-step-title">Cryptographic Isolation &amp; Argon2id</h3>
+            <p class="act-copy">
+              Passwords are salted and hashed using memory-hard Argon2id. Session tokens are signed with HMAC-SHA256, and per-user database partitions prevent noisy-neighbor leaks and horizontal privilege escalation.
+            </p>
+          </article>
+
+          <article class="sequence-step" id="step-03">
+            <span class="sequence-step-num">STEP 03</span>
+            <h3 class="sequence-step-title">Embedded Fuzzy Vector Memory</h3>
+            <p class="act-copy">
+              Instead of delegating to heavy cloud vector databases that introduce multi-hop network latency, RustBot integrates a local in-memory cosine similarity search directly inside the Rust process memory space, resolving top-K context in microseconds.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Act 03: Throughput Benchmarks -->
+    <section class="case-act">
+      <span class="act-label">03 // PERFORMANCE BENCHMARKS</span>
+      <h2 class="act-title">Production metrics under high-concurrency loads.</h2>
+      
+      <div class="metrics-row">
+        <div class="metric-item">
+          <div class="metric-val">&lt; 0.8ms</div>
+          <div class="metric-label">Route Latency (P99)</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-val">18 MB</div>
+          <div class="metric-label">Idle Memory Footprint</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-val">0</div>
+          <div class="metric-label">Garbage Collection Pauses</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-val">Argon2id</div>
+          <div class="metric-label">Cryptographic Standard</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Project Transition -->
+    <section class="case-next-project">
+      <div class="next-project-label">NEXT IN SEQUENCE // 06 OF 07</div>
+      <a class="next-project-link interactive" href="./alpha-beta-agent.html">
+        <div>
+          <span style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.15em; color: var(--muted); display: block; margin-bottom: 8px;">ADVERSARIAL AI &amp; HEURISTIC SEARCH</span>
+          <h2 class="next-project-title">Alpha-Beta Search Agent.</h2>
+        </div>
+        <div class="next-project-meta">
+          <span>EXPLORE PROJECT →</span>
+        </div>
+      </a>
+    </section>
+
+  </main>
+
+  <script type="module" src="../js/case-study.js"></script>
+</body>
+</html>

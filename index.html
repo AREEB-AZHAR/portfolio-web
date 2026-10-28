@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Areeb Azhar — AI & Software Architect | Beyond What You See</title>
+  <meta name="description" content="Areeb Azhar's portfolio — architecting intelligent systems, distributed backends, autonomous utility AI engines, and immersive digital realities." />
+  <meta name="theme-color" content="#050505" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- Custom Precision Magnetic Cursor -->
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Accessibility Skip Link -->
+  <a class="skip-link" href="#hero">Skip to introduction</a>
+
+  <!-- ══════════════════════════════════════════
+       PRELOADER / INITIALIZATION EXPERIENCE GATE
+       ══════════════════════════════════════════ -->
+  <section class="preloader" id="preloader" aria-label="Initializing Experience">
+    <div class="preloader-brand">
+      <!-- Geometric Monogram Brand Mark AA -->
+      <svg viewBox="0 0 280 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Arc 1 -->
+        <path class="brand-stroke" d="M30 110 C30 50 80 20 120 20 C160 20 190 60 190 110" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+        <!-- Arc 2 Inner AA -->
+        <path class="brand-stroke" d="M90 110 C90 70 120 50 145 50 C170 50 190 75 190 110" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+        <!-- Crossbar -->
+        <line class="brand-stroke" x1="45" y1="85" x2="175" y2="85" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+        <!-- Geometric Accent Block -->
+        <rect x="220" y="45" width="28" height="28" fill="currentColor" opacity="0.9"/>
+        <line class="brand-stroke" x1="220" y1="105" x2="248" y2="105" stroke="currentColor" stroke-width="4.5"/>
+      </svg>
+    </div>
+
+    <div class="preloader-readout">
+      <span class="preloader-counter" id="preloader-counter">00%</span>
+      <span class="preloader-status">INITIALIZING SYSTEM ARCHITECTURE</span>
+    </div>
+
+    <div class="preloader-line-track">
+      <div class="preloader-line-fill" id="preloader-fill"></div>
+    </div>
+
+    <div class="preloader-choices">
+      <button type="button" class="preloader-choice-btn interactive" id="entry-quiet">
+        ENTER QUIETLY
+      </button>
+      <button type="button" class="preloader-choice-btn interactive" id="entry-sound">
+        ENTER WITH SOUND
+      </button>
+    </div>
+
+    <button type="button" class="preloader-access interactive" id="reduce-motion-btn">
+      Reduce motion
+    </button>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FIXED MINIMALIST MASTHEAD
+       ══════════════════════════════════════════ -->
+  <header class="masthead">
+    <div class="masthead-left">
+      <a class="masthead-logo interactive" href="#hero" aria-label="Areeb Azhar Home">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 3"/>
+          <path d="M12 28L20 12L28 28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="15" y1="23" x2="25" y2="23" stroke="currentColor" stroke-width="1.8"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="masthead-center">
+      <span class="role-pill">AI SYSTEMS &amp; DISTRIBUTED ARCHITECTURE</span>
+    </div>
+
+    <div class="masthead-right">
+      <!-- Web Audio Sound Toggle -->
+      <button type="button" class="sound-toggle-btn interactive" data-sound-toggle aria-pressed="false" title="Audio feedback toggle">
+        <span class="sound-wave">
+          <span class="sound-bar"></span>
+          <span class="sound-bar"></span>
+          <span class="sound-bar"></span>
+        </span>
+        <span class="sound-label">SOUND OFF</span>
+      </button>
+
+      <!-- Fullscreen Menu Trigger -->
+      <button type="button" class="menu-trigger-btn interactive" id="menu-trigger">
+        MENU
+      </button>
+
+      <!-- Kinetic Let's Talk Button -->
+      <a class="kinetic-action masthead-talk interactive" href="#contact">
+        <span class="kinetic-window">
+          <span class="kinetic-label">Let's talk ↗</span>
+          <span class="kinetic-echo" aria-hidden="true">Let's talk ↗</span>
+        </span>
+        <span class="kinetic-rule" aria-hidden="true"></span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════
+       FULLSCREEN ARCHITECTURAL NAVIGATION OVERLAY
+       ══════════════════════════════════════════ -->
+  <div class="fullscreen-menu" id="fullscreen-menu" aria-label="Navigation Overlay">
+    <div class="menu-header">
+      <span class="role-pill">NAVIGATION CATALOG</span>
+      <button type="button" class="menu-trigger-btn interactive" id="menu-close">
+        CLOSE ×
+      </button>
+    </div>
+
+    <ul class="menu-nav-list">
+      <li class="menu-nav-item">
+        <a class="menu-nav-link interactive" href="#hero">
+          <span class="menu-nav-index">01</span>
+          <span>Home</span>
+        </a>
+      </li>
+      <li class="menu-nav-item">
+        <a class="menu-nav-link interactive" href="#perspective">
+          <span class="menu-nav-index">02</span>
+          <span>Perspective &amp; Philosophy</span>
+        </a>
+      </li>
+      <li class="menu-nav-item">
+        <a class="menu-nav-link interactive" href="#work">
+          <span class="menu-nav-index">03</span>
+          <span>Selected Work</span>
+        </a>
+      </li>
+      <li class="menu-nav-item">
+        <a class="menu-nav-link interactive" href="#systems">
+          <span class="menu-nav-index">04</span>
+          <span>Systems &amp; Capabilities</span>
+        </a>
+      </li>
+      <li class="menu-nav-item">
+        <a class="menu-nav-link interactive" href="#contact">
+          <span class="menu-nav-index">05</span>
+          <span>Contact &amp; Dialogue</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="menu-footer">
+      <div class="menu-status">
+        <span class="status-dot"></span>
+        <span>AVAILABLE FOR SELECT ARCHITECTURE &amp; ENGINEERING OPPORTUNITIES</span>
+      </div>
+      <div class="menu-time">
+        <span data-live-time>PKT (UTC+5) --:--:--</span>
+      </div>
+      <div class="menu-socials">
+        <a class="interactive" href="https://github.com/AREEB-AZHAR" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a class="interactive" href="mailto:areebazhar3@gmail.com">Email ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       HERO EXPERIENCE & CONTINUOUS PHILOSOPHY MARQUEE
+       ══════════════════════════════════════════ -->
+  <main>
+    <section class="hero-experience" id="hero">
+      <canvas id="hero-canvas"></canvas>
+
+      <div class="hero-main">
+        <div class="hero-tagline">
+          <span>AI Systems Engineer · Game Architect</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="masked-line"><span class="masked-inner">AREEB</span></span>
+          <span class="masked-line"><span class="masked-inner">AZHAR.</span></span>
+        </h1>
+
+        <p class="hero-deck">
+          Architecting intelligent systems, distributed backends, and living simulation realities — from autonomous utility AI to sub-16ms neural prediction engines.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn-gazzar interactive" href="#work">
+            <span>Explore Systems</span>
+            <span>↓</span>
+          </a>
+          <a class="btn-gazzar-outline interactive" href="#contact">
+            <span>Initiate Dialogue ↗</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-bottom-bar">
+        <div>
+          <span>BEYOND WHAT YOU SEE // ARCHITECTURAL PORTFOLIO</span>
+        </div>
+        <a class="scroll-cue interactive" href="#perspective">
+          <span>A shift in perspective</span>
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M8 2v10M3 7l5 5 5-5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Endless Philosophy Marquee Ticker -->
+    <div class="marquee-container" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-item">
+          <span>Perspective reveals the whole, clarity turns complexity into understanding, and direction shapes systems with purpose.</span>
+          <span class="divider">×</span>
+        </div>
+        <div class="marquee-item">
+          <span>Perspective reveals the whole, clarity turns complexity into understanding, and direction shapes systems with purpose.</span>
+          <span class="divider">×</span>
+        </div>
+        <div class="marquee-item">
+          <span>Perspective reveals the whole, clarity turns complexity into understanding, and direction shapes systems with purpose.</span>
+          <span class="divider">×</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+         CHAPTER 01: OPTICAL PERSPECTIVE NARRATIVE
+         ══════════════════════════════════════════ -->
+    <section class="perspective-section" id="perspective">
+      <div class="container-narrow">
+        <span class="section-eyebrow">01 // A STUDY IN PERSPECTIVE</span>
+
+        <h2 class="perspective-monument">
+          <span class="masked-line"><span class="masked-inner">SHIFT THE FRAME.</span></span>
+          <span class="masked-line"><span class="masked-inner">SEE BEYOND.</span></span>
+          <span class="masked-line"><span class="masked-inner">LOOK AGAIN.</span></span>
+        </h2>
+
+        <!-- The 4 Optical Beats -->
+        <div class="optical-beats-grid">
+          <div class="optical-beat">
+            <span class="beat-index">01 / 04</span>
+            <h3 class="beat-heading">Look a little deeper.</h3>
+            <p class="beat-desc">Software is not a passive container of syntax. It is a living fabric of state, entropy, and mathematical dynamics beneath the glass.</p>
+          </div>
+          <div class="optical-beat">
+            <span class="beat-index">02 / 04</span>
+            <h3 class="beat-heading">A small shift.</h3>
+            <p class="beat-desc">From rigid static loops to continuous adaptation — algorithms that observe, recalibrate, and respond dynamically in real time.</p>
+          </div>
+          <div class="optical-beat">
+            <span class="beat-index">03 / 04</span>
+            <h3 class="beat-heading">A whole new perspective.</h3>
+            <p class="beat-desc">Where algorithmic rigor meets deeply human intuition — systems designed to feel effortless, no matter their internal complexity.</p>
+          </div>
+          <div class="optical-beat">
+            <span class="beat-index">04 / 04</span>
+            <h3 class="beat-heading">The details change everything.</h3>
+            <p class="beat-desc">Sub-16ms neural inference, zero memory leaks, and deterministic state trees that withstand enterprise-scale loads.</p>
+          </div>
+        </div>
+
+        <!-- The Triad Core Pillars -->
+        <div class="triad-container">
+          <div class="triad-pillar">
+            <h3>Perspective</h3>
+            <p>See beyond the obvious surface limitations. Understand the complete system topology before placing the first node.</p>
+          </div>
+          <div class="triad-pillar">
+            <h3>Clarity</h3>
+            <p>Reduce noise. Eliminate technical debt. Isolate what truly drives performance, stability, and elegance.</p>
+          </div>
+          <div class="triad-pillar">
+            <h3>Direction</h3>
+            <p>Move with mathematical precision. Every architectural decision is deliberate, testable, and built to scale.</p>
+          </div>
+        </div>
+
+        <!-- Core Thesis -->
+        <div class="thesis-box">
+          <h2 class="thesis-statement">
+            BUILT ON LOGIC.<br>
+            MADE TO FEEL SIMPLE.
+          </h2>
+          <p class="thesis-sub">
+            Structure beneath the surface. Purpose in every interaction.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         CHAPTER 02: SELECTED WORK (7 REAL SYSTEMS)
+         ══════════════════════════════════════════ -->
+    <section class="work-section" id="work">
+      <div class="work-header">
+        <div>
+          <span class="section-eyebrow">02 // SELECTED WORK</span>
+          <h2 class="work-title">Ideas, Put to Work.</h2>
+        </div>
+        <p class="systems-caption">
+          Seven production systems spanning autonomous game engines, financial terminals, cryptographic attestation, neural loops, and bespoke digital commerce.
+        </p>
+      </div>
+
+      <div class="work-grid">
+        <!-- Connecting SVG Stroke -->
+        <svg class="work-connecting-svg" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 2 1000">
+          <line id="work-connecting-path" x1="1" y1="0" x2="1" y2="1000" stroke="var(--paper)" stroke-width="1.5" stroke-dasharray="1000" stroke-dashoffset="1000"/>
+        </svg>
+
+        <!-- Project 01: Genesis Cogniverse 2D -->
+        <article class="project-composition">
+          <div class="project-media-col">
+            <a class="project-image-frame interactive" href="./projects/cogniverse-rpg.html">
+              <img src="./images/cogniverse_tactical.png" alt="Genesis Cogniverse 2D Tactical View" loading="lazy" />
+            </a>
+          </div>
+          <div class="project-info-col">
+            <div class="project-meta-top">
+              <span class="project-num">01 // 07</span>
+              <span class="project-category">GAME ENGINE &amp; AUTONOMOUS AI</span>
+            </div>
+            <h3 class="project-heading">Genesis Cogniverse 2D.</h3>
+            <p class="project-summary">
+              An autonomous God Simulator and living sovereign RPG created in Godot 4 with a high-performance Rust backend. Features procedural 32×32 pixel-art atlas synthesis, 128×128 multi-layer world grids, and continuous Infinite Axis Utility AI scoring.
+            </p>
+            <div class="project-tech-tags">
+              <span class="tech-tag">Godot 4</span>
+              <span class="tech-tag">Rust</span>
+              <span class="tech-tag">Utility AI</span>
+              <span class="tech-tag">FastNoiseLite</span>
+              <span class="tech-tag">TileMapLayer</span>
+            </div>
+            <a class="explore-case-btn kinetic-action interactive" href="./projects/cogniverse-rpg.html">
+              <span class="kinetic-window">
+                <span class="kinetic-label">Explore Project Briefing</span>
+                <span class="kinetic-echo" aria-hidden="true">Explore Project Briefing</span>
+              </span>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="kinetic-rule" aria-hidden="true"></span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 02: CryptoTrader Terminal -->
+        <article class="project-composition reverse">
+          <div class="project-media-col">
+            <a class="project-image-frame interactive" href="./projects/crypto-dashboard.html">
+              <img src="./images/crypto_dashboard.png" alt="CryptoTrader Market Dashboard" loading="lazy" />
+            </a>
+          </div>
+          <div class="project-info-col">
+            <div class="project-meta-top">
+              <span class="project-num">02 // 07</span>
+              <span class="project-category">FINTECH &amp; REAL-TIME WEB</span>
+            </div>
+            <h3 class="project-heading">CryptoTrader Terminal.</h3>
+            <p class="project-summary">
+              Production-grade cryptocurrency analytics and paper trading simulator. Built with React 19, TradingView Lightweight Charts, TanStack Query, and Zustand for millisecond-level candlestick telemetry and risk-free simulated portfolio execution.
+            </p>
+            <div class="project-tech-tags">
+              <span class="tech-tag">React 19</span>
+              <span class="tech-tag">TradingView Charts</span>
+              <span class="tech-tag">TanStack Query</span>
+              <span class="tech-tag">Zustand</span>
+              <span class="tech-tag">Vite 8</span>
+            </div>
+            <a class="explore-case-btn kinetic-action interactive" href="./projects/crypto-dashboard.html">
+              <span class="kinetic-window">
+                <span class="kinetic-label">Explore Project Briefing</span>
+                <span class="kinetic-echo" aria-hidden="true">Explore Project Briefing</span>
+              </span>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="kinetic-rule" aria-hidden="true"></span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 03: Adaptive Difficulty Engine -->
+        <article class="project-composition">
+          <div class="project-media-col">
+            <a class="project-image-frame interactive" href="./projects/adaptive-difficulty.html">
+              <img src="./images/proj_puzzle_ai.png" alt="Adaptive Difficulty Puzzle Engine" loading="lazy" />
+            </a>
+          </div>
+          <div class="project-info-col">
+            <div class="project-meta-top">
+              <span class="project-num">03 // 07</span>
+              <span class="project-category">NEURAL SYSTEMS &amp; GAME ARCHITECTURE</span>
+            </div>
+            <h3 class="project-heading">Adaptive Difficulty Engine.</h3>
+            <p class="project-summary">
+              Real-time neural network inference embedded directly into the Unity 60 FPS game loop. Monitors multi-dimensional player stress, cognitive latency, and error rates to dynamically recalibrate puzzle complexity with sub-16ms response time.
+            </p>
+            <div class="project-tech-tags">
+              <span class="tech-tag">Unity</span>
+              <span class="tech-tag">C#</span>
+              <span class="tech-tag">Neural Networks</span>
+              <span class="tech-tag">Real-Time Telemetry</span>
+            </div>
+            <a class="explore-case-btn kinetic-action interactive" href="./projects/adaptive-difficulty.html">
+              <span class="kinetic-window">
+                <span class="kinetic-label">Explore Project Briefing</span>
+                <span class="kinetic-echo" aria-hidden="true">Explore Project Briefing</span>
+              </span>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="kinetic-rule" aria-hidden="true"></span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 04: On-Chain Credential Attestation -->
+        <article class="project-composition reverse">
+          <div class="project-media-col">
+            <a class="project-image-frame interactive" href="./projects/blockchain-attestation.html">
+              <img src="./images/blockchain_verify.png" alt="Blockchain Credential Verification Portal" loading="lazy" />
+            </a>
+          </div>
+          <div class="project-info-col">
+            <div class="project-meta-top">
+              <span class="project-num">04 // 07</span>
+              <span class="project-category">DECENTRALIZED ARCHITECTURE &amp; CRYPTOGRAPHY</span>
+            </div>
+            <h3 class="project-heading">On-Chain Credential Attestation.</h3>
+            <p class="project-summary">
+              Hybrid decentralized attestation system powered by a Hyperledger Fabric permissioned network and an interactive Zero-Knowledge Privacy Sandbox. Enables drag-and-drop instant hash verification of academic transcripts and Merkle tree inclusion proofs.
+            </p>
+            <div class="project-tech-tags">
+              <span class="tech-tag">Hyperledger Fabric</span>
+              <span class="tech-tag">Zero-Knowledge Proofs</span>
+              <span class="tech-tag">Merkle Trees</span>
+              <span class="tech-tag">Express API</span>
+            </div>
+            <a class="explore-case-btn kinetic-action interactive" href="./projects/blockchain-attestation.html">
+              <span class="kinetic-window">
+                <span class="kinetic-label">Explore Project Briefing</span>
+                <span class="kinetic-echo" aria-hidden="true">Explore Project Briefing</span>
+              </span>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="kinetic-rule" aria-hidden="true"></span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 05: RustBot Autonomous Engine -->
+        <article class="project-composition">
+          <div class="project-media-col">
+            <a class="project-image-frame interactive" href="./projects/rustbot-engine.html" style="background: #090908; display: flex; align-items: center; justify-content: center; padding: 2rem;">
+              <div style="font-family: var(--font-mono); color: var(--paper-dim); font-size: 13px; line-height: 1.8;">
+                <span style="color: var(--muted-dark)">// Rust Tokio Engine</span><br>
+                <span style="color: #c5a880">pub struct</span> <span style="color: var(--paper-bright)">AutonomousEngine</span> {<br>
+                &nbsp;&nbsp;memory: <span style="color: #8e8d86">Arc&lt;VectorStore&gt;</span>,<br>
+                &nbsp;&nbsp;runtime: <span style="color: #8e8d86">TokioRuntime</span>,<br>
+                }<br>
+                <span style="color: #55c777;">✓ Zero Garbage Collection</span><br>
+                <span style="color: #55c777;">✓ Sub-millisecond Routing</span>
+              </div>
+            </a>
+          </div>
+          <div class="project-info-col">
+            <div class="project-meta-top">
+              <span class="project-num">05 // 07</span>
+              <span class="project-category">SYSTEMS PROGRAMMING &amp; APPLIED AI</span>
+            </div>
+            <h3 class="project-heading">RustBot Autonomous Engine.</h3>
+            <p class="project-summary">
+              Pure Rust high-concurrency conversational engine with Tokio async scheduling, Axum routing, SQLite database isolation with Argon2id cryptographic hashing, and local fuzzy AI memory stores for persistent agentic context.
+            </p>
+            <div class="project-tech-tags">
+              <span class="tech-tag">Rust</span>
+              <span class="tech-tag">Tokio</span>
+              <span class="tech-tag">Axum</span>
+              <span class="tech-tag">SQLite</span>
+              <span class="tech-tag">Vector Memory</span>
+            </div>
+            <a class="explore-case-btn kinetic-action interactive" href="./projects/rustbot-engine.html">
+              <span class="kinetic-window">
+                <span class="kinetic-label">Explore Project Briefing</span>
+                <span class="kinetic-echo" aria-hidden="true">Explore Project Briefing</span>
+              </span>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="kinetic-rule" aria-hidden="true"></span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 06: Alpha-Beta Search Agent -->
+        <article class="project-composition reverse">
+          <div class="project-media-col">
+            <a class="project-image-frame interactive" href="./projects/alpha-beta-agent.html">
+              <img src="./images/proj_alphabeta.png" alt="Alpha-Beta Adversarial Agent" loading="lazy" />
+            </a>
+          </div>
+          <div class="project-info-col">
+            <div class="project-meta-top">
+              <span class="project-num">06 // 07</span>
+              <span class="project-category">ADVERSARIAL AI &amp; HEURISTIC SEARCH</span>
+            </div>
+            <h3 class="project-heading">Alpha-Beta Search Agent.</h3>
+            <p class="project-summary">
+              Adversarial AI decision engine implementing Minimax with optimized Alpha-Beta pruning, dynamic depth regulation, and transposition tables. Eliminates redundant game tree evaluations to achieve master-level strategic play in real-time constraints.
+            </p>
+            <div class="project-tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Minimax</span>
+              <span class="tech-tag">Alpha-Beta Pruning</span>
+              <span class="tech-tag">Heuristics</span>
+            </div>
+            <a class="explore-case-btn kinetic-action interactive" href="./projects/alpha-beta-agent.html">
+              <span class="kinetic-window">
+                <span class="kinetic-label">Explore Project Briefing</span>
+                <span class="kinetic-echo" aria-hidden="true">Explore Project Briefing</span>
+              </span>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="kinetic-rule" aria-hidden="true"></span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 07: Amazing Giant Flowers -->
+        <article class="project-composition">
+          <div class="project-media-col">
+            <a class="project-image-frame interactive" href="./projects/giant-flowers.html">
+              <img src="./images/shopify_landing_pdf.jpg" alt="Amazing Giant Flowers Storefront" loading="lazy" />
+            </a>
+          </div>
+          <div class="project-info-col">
+            <div class="project-meta-top">
+              <span class="project-num">07 // 07</span>
+              <span class="project-category">LUXURY COMMERCE &amp; DIGITAL CRAFTSMANSHIP</span>
+            </div>
+            <h3 class="project-heading">Amazing Giant Flowers.</h3>
+            <p class="project-summary">
+              Bespoke e-commerce experience designed for a luxury handcrafted sculptural floral studio. Built with custom Shopify Liquid, vanilla CSS transitions, and high-performance mobile UX to deliver an emotional, premium shopping journey.
+            </p>
+            <div class="project-tech-tags">
+              <span class="tech-tag">Shopify Liquid</span>
+              <span class="tech-tag">Vanilla CSS</span>
+              <span class="tech-tag">UX Architecture</span>
+              <span class="tech-tag">E-Commerce</span>
+            </div>
+            <a class="explore-case-btn kinetic-action interactive" href="./projects/giant-flowers.html">
+              <span class="kinetic-window">
+                <span class="kinetic-label">Explore Project Briefing</span>
+                <span class="kinetic-echo" aria-hidden="true">Explore Project Briefing</span>
+              </span>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="kinetic-rule" aria-hidden="true"></span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         CHAPTER 03: SYSTEMS & CAPABILITIES
+         ══════════════════════════════════════════ -->
+    <section class="systems-section" id="systems">
+      <div class="systems-header">
+        <span class="section-eyebrow">03 // ARCHITECTURAL PILLARS</span>
+        <h2 class="systems-title">Clarity, By Design.</h2>
+        <p class="systems-caption">
+          When everything has its place, the whole becomes easier to understand. Four technical pillars defining modern software craftsmanship.
+        </p>
+      </div>
+
+      <div class="systems-grid">
+        <div class="system-card">
+          <span class="system-card-index">01 / PILLAR</span>
+          <h3 class="system-card-title">Autonomous &amp; Neural AI</h3>
+          <p class="system-card-desc">
+            Designing continuous Infinite Axis Utility scoring algorithms, reinforcement heuristics, and neural inference loops that operate natively within real-time rendering environments.
+          </p>
+          <ul class="system-card-skills">
+            <li>• Utility Decision Scoring</li>
+            <li>• Neural Telemetry &amp; Inference</li>
+            <li>• Heuristic Search &amp; Pruning</li>
+            <li>• Fuzzy Logic &amp; Soft Computing</li>
+          </ul>
+        </div>
+
+        <div class="system-card">
+          <span class="system-card-index">02 / PILLAR</span>
+          <h3 class="system-card-title">Systems Programming &amp; Concurrency</h3>
+          <p class="system-card-desc">
+            Constructing zero-cost abstraction systems in pure Rust. Memory safety without garbage collection pauses, asynchronous Tokio task schedulers, and high-throughput network topologies.
+          </p>
+          <ul class="system-card-skills">
+            <li>• Rust &amp; Memory Safety</li>
+            <li>• Tokio Async &amp; Axum Web</li>
+            <li>• High-Throughput I/O</li>
+            <li>• SQLite Concurrency Isolation</li>
+          </ul>
+        </div>
+
+        <div class="system-card">
+          <span class="system-card-index">03 / PILLAR</span>
+          <h3 class="system-card-title">Modern Web &amp; Financial Platforms</h3>
+          <p class="system-card-desc">
+            Developing responsive, high-frequency web applications with React 19, TradingView charting, persistent state caching, and resilient client-side architecture.
+          </p>
+          <ul class="system-card-skills">
+            <li>• React 19 &amp; Next.js</li>
+            <li>• TradingView Lightweight Charts</li>
+            <li>• TanStack Query &amp; Zustand</li>
+            <li>• Hardware-Accelerated Layouts</li>
+          </ul>
+        </div>
+
+        <div class="system-card">
+          <span class="system-card-index">04 / PILLAR</span>
+          <h3 class="system-card-title">Decentralized &amp; Cryptographic Tech</h3>
+          <p class="system-card-desc">
+            Implementing immutable permissioned ledger architectures, Zero-Knowledge verification proofs, and Merkle tree inclusion algorithms for tamper-proof attestation.
+          </p>
+          <ul class="system-card-skills">
+            <li>• Hyperledger Fabric Ledgers</li>
+            <li>• Zero-Knowledge Proofs (ZKP)</li>
+            <li>• Merkle Inclusion Trees</li>
+            <li>• Cryptographic Hash Verification</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         CHAPTER 04: MONUMENTAL DIALOGUE FOOTER
+         ══════════════════════════════════════════ -->
+    <footer class="dialogue-footer" id="contact">
+      <div class="footer-content">
+        <span class="section-eyebrow">04 // INITIATE DIALOGUE</span>
+        
+        <h2 class="footer-statement">
+          <span class="masked-line"><span class="masked-inner">LET'S BUILD SOMETHING</span></span>
+          <span class="masked-line"><span class="masked-inner">EXTRAORDINARY.</span></span>
+        </h2>
+
+        <div class="footer-email-box">
+          <a class="footer-email-link interactive" href="mailto:areebazhar3@gmail.com">
+            areebazhar3@gmail.com ↗
+          </a>
+          <button type="button" class="copy-email-btn interactive" id="copy-email-btn">
+            COPY EMAIL
+          </button>
+        </div>
+
+        <div class="footer-meta-grid">
+          <div class="footer-meta-col">
+            <h4>Location &amp; Timezone</h4>
+            <p>Islamabad, Pakistan<br><span data-live-time>PKT (UTC+5)</span></p>
+          </div>
+          <div class="footer-meta-col">
+            <h4>Current Availability</h4>
+            <p>Open for select systems architecture, AI engineering &amp; high-impact roles.</p>
+          </div>
+          <div class="footer-meta-col">
+            <h4>Direct Channel</h4>
+            <p>areebazhar3@gmail.com<br>Response time: &lt; 24h</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom-row">
+          <div>
+            <span>© 2026 Areeb Azhar — Crafted with Architectural Rigor &amp; Intent.</span>
+          </div>
+          <div class="footer-social-links">
+            <a class="interactive" href="https://github.com/AREEB-AZHAR" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a class="interactive" href="mailto:areebazhar3@gmail.com">Email ↗</a>
+            <a class="interactive" href="#hero">Back to Top ↑</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
