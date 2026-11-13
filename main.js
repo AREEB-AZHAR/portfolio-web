@@ -123,14 +123,28 @@ const menuLinks = document.querySelectorAll('.menu-nav-link');
 function openMenu() {
   if (fullscreenMenu) {
     fullscreenMenu.classList.add('open');
-    if (menuTrigger) menuTrigger.textContent = 'CLOSE';
+    fullscreenMenu.setAttribute('aria-hidden', 'false');
+    if (menuTrigger) {
+      menuTrigger.textContent = 'CLOSE';
+      menuTrigger.setAttribute('aria-expanded', 'true');
+    }
+    if (window.lenis) {
+      window.lenis.stop();
+    }
   }
 }
 
 function closeMenu() {
   if (fullscreenMenu) {
     fullscreenMenu.classList.remove('open');
-    if (menuTrigger) menuTrigger.textContent = 'MENU';
+    fullscreenMenu.setAttribute('aria-hidden', 'true');
+    if (menuTrigger) {
+      menuTrigger.textContent = 'MENU';
+      menuTrigger.setAttribute('aria-expanded', 'false');
+    }
+    if (window.lenis) {
+      window.lenis.start();
+    }
   }
 }
 

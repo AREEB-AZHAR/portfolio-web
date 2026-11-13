@@ -90,7 +90,7 @@
       </button>
 
       <!-- Fullscreen Menu Trigger -->
-      <button type="button" class="menu-trigger-btn interactive" id="menu-trigger">
+      <button type="button" class="menu-trigger-btn interactive" id="menu-trigger" aria-controls="fullscreen-menu" aria-expanded="false" aria-label="Toggle navigation menu">
         MENU
       </button>
 
@@ -108,58 +108,66 @@
   <!-- ══════════════════════════════════════════
        FULLSCREEN ARCHITECTURAL NAVIGATION OVERLAY
        ══════════════════════════════════════════ -->
-  <div class="fullscreen-menu" id="fullscreen-menu" aria-label="Navigation Overlay">
-    <div class="menu-header">
-      <span class="role-pill">NAVIGATION CATALOG</span>
-      <button type="button" class="menu-trigger-btn interactive" id="menu-close">
-        CLOSE ×
-      </button>
-    </div>
-
-    <ul class="menu-nav-list">
-      <li class="menu-nav-item">
-        <a class="menu-nav-link interactive" href="#hero">
-          <span class="menu-nav-index">01</span>
-          <span>Home</span>
-        </a>
-      </li>
-      <li class="menu-nav-item">
-        <a class="menu-nav-link interactive" href="#perspective">
-          <span class="menu-nav-index">02</span>
-          <span>Perspective &amp; Philosophy</span>
-        </a>
-      </li>
-      <li class="menu-nav-item">
-        <a class="menu-nav-link interactive" href="#work">
-          <span class="menu-nav-index">03</span>
-          <span>Selected Work</span>
-        </a>
-      </li>
-      <li class="menu-nav-item">
-        <a class="menu-nav-link interactive" href="#systems">
-          <span class="menu-nav-index">04</span>
-          <span>Systems &amp; Capabilities</span>
-        </a>
-      </li>
-      <li class="menu-nav-item">
-        <a class="menu-nav-link interactive" href="#contact">
-          <span class="menu-nav-index">05</span>
-          <span>Contact &amp; Dialogue</span>
-        </a>
-      </li>
-    </ul>
-
-    <div class="menu-footer">
-      <div class="menu-status">
-        <span class="status-dot"></span>
-        <span>AVAILABLE FOR SELECT ARCHITECTURE &amp; ENGINEERING OPPORTUNITIES</span>
+  <div class="fullscreen-menu" id="fullscreen-menu" aria-label="Navigation Overlay" aria-hidden="true" data-lenis-prevent>
+    <div class="menu-container">
+      <div class="menu-header">
+        <div class="menu-header-left">
+          <span class="role-pill">NAVIGATION CATALOG</span>
+        </div>
+        <div class="menu-header-right">
+          <button type="button" class="menu-trigger-btn menu-close-btn interactive" id="menu-close" aria-label="Close Navigation Overlay">
+            CLOSE ×
+          </button>
+        </div>
       </div>
-      <div class="menu-time">
-        <span data-live-time>PKT (UTC+5) --:--:--</span>
-      </div>
-      <div class="menu-socials">
-        <a class="interactive" href="https://github.com/AREEB-AZHAR" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-        <a class="interactive" href="mailto:areebazhar3@gmail.com">Email ↗</a>
+
+      <nav class="menu-nav-wrapper" aria-label="Main Navigation">
+        <ul class="menu-nav-list">
+          <li class="menu-nav-item">
+            <a class="menu-nav-link interactive" href="#hero">
+              <span class="menu-nav-index">01</span>
+              <span class="menu-nav-label">Home</span>
+            </a>
+          </li>
+          <li class="menu-nav-item">
+            <a class="menu-nav-link interactive" href="#perspective">
+              <span class="menu-nav-index">02</span>
+              <span class="menu-nav-label">Perspective &amp; Philosophy</span>
+            </a>
+          </li>
+          <li class="menu-nav-item">
+            <a class="menu-nav-link interactive" href="#work">
+              <span class="menu-nav-index">03</span>
+              <span class="menu-nav-label">Selected Work</span>
+            </a>
+          </li>
+          <li class="menu-nav-item">
+            <a class="menu-nav-link interactive" href="#systems">
+              <span class="menu-nav-index">04</span>
+              <span class="menu-nav-label">Systems &amp; Capabilities</span>
+            </a>
+          </li>
+          <li class="menu-nav-item">
+            <a class="menu-nav-link interactive" href="#contact">
+              <span class="menu-nav-index">05</span>
+              <span class="menu-nav-label">Contact &amp; Dialogue</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="menu-footer">
+        <div class="menu-status">
+          <span class="status-dot"></span>
+          <span>AVAILABLE FOR SELECT ARCHITECTURE &amp; ENGINEERING OPPORTUNITIES</span>
+        </div>
+        <div class="menu-time">
+          <span data-live-time>PKT (UTC+5) --:--:--</span>
+        </div>
+        <div class="menu-socials">
+          <a class="interactive" href="https://github.com/AREEB-AZHAR" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a class="interactive" href="mailto:areebazhar3@gmail.com">Email ↗</a>
+        </div>
       </div>
     </div>
   </div>

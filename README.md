@@ -73,6 +73,9 @@ Each project opens into its own dedicated briefing page adopting Gazzar’s 4-ac
 
 ### 6. Fullscreen Architectural Navigation Overlay
 - Fullscreen sliding curtain with high-contrast typography links (`01 HOME` to `05 CONTACT`).
+- Complete multi-layer visibility containment (`visibility: hidden`, `opacity: 0`, and `overflow-y: auto`) preventing menu item overflow or bleed-through when closed.
+- Automatic Lenis background scroll locking on menu open (`window.lenis.stop()` / `window.lenis.start()`).
+- Full keyboard accessibility with `Escape` dismiss and synchronized `aria-expanded` / `aria-hidden` states.
 - Live Pakistan Standard Time (PKT, UTC+5) clock ticking every second.
 - Status indicator: `● AVAILABLE FOR SELECT ROLES`.
 
