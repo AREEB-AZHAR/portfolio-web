@@ -1,10 +1,13 @@
 # 🏛️ Areeb Azhar — Architectural Portfolio (Beyond What You See)
 
+[![Live Demo](https://img.shields.io/badge/Live_Site-areeb--azhar.github.io%2Fportfolio--web-brightgreen?style=for-the-badge&logo=github)](https://areeb-azhar.github.io/portfolio-web/)
 [![Vite](https://img.shields.io/badge/Vite-8.0-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vite.dev/)
 [![GSAP](https://img.shields.io/badge/GSAP-3.14-88CE02?style=for-the-badge&logo=greensock&logoColor=white)](https://greensock.com/)
 [![Lenis](https://img.shields.io/badge/Lenis-Smooth_Scroll-000000?style=for-the-badge)](https://github.com/darkroomengineering/lenis)
 [![Design](https://img.shields.io/badge/Aesthetic-Gazzar_Obsidian-e4e1d9?style=for-the-badge)](https://www.thisisgazzar.com/en)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](./LICENSE)
+
+> 🌐 **Live Website**: [https://areeb-azhar.github.io/portfolio-web/](https://areeb-azhar.github.io/portfolio-web/)
 
 An **Awwwards-caliber, museum-grade editorial digital experience** redesigned to match the aesthetic, interaction flow, and structural craftsmanship of **[Mohamed Elgazzar's portfolio (thisisgazzar.com)](https://www.thisisgazzar.com/en)**. Featuring deep obsidian tones (`#050505`), warm ivory typography (`#e4e1d9`), high-precision monospace accents, a Web Audio API micro-sound synthesizer, an optical perspective study, and **7 dedicated, museum-grade case study briefing pages**.
 
@@ -12,17 +15,17 @@ An **Awwwards-caliber, museum-grade editorial digital experience** redesigned to
 
 ## 📸 Visual Showcase
 
-| Preloader & Experience Choice | Hero & Continuous Marquee |
+| Cogniverse Cosmic View | CryptoTrader Dashboard |
 |:---:|:---:|
-| ![Preloader](C:\Users\areeb\.gemini\antigravity-ide\brain\31914ee3-2f6a-434e-86b5-e07fcbe492c9\preloader_100_1793150417079.png) | ![Hero](C:\Users\areeb\.gemini\antigravity-ide\brain\31914ee3-2f6a-434e-86b5-e07fcbe492c9\hero_section_1793150422271.png) |
+| ![Cogniverse Cosmic](./images/cogniverse_cosmic.png) | ![Crypto Dashboard](./images/crypto_dashboard.png) |
 
-| Chapter 01 (Optical Perspective & Triad) | Chapter 02 (Selected Work Showcase) |
+| Blockchain Attestation | Cogniverse Tactical View |
 |:---:|:---:|
-| ![Triad Pillars](C:\Users\areeb\.gemini\antigravity-ide\brain\31914ee3-2f6a-434e-86b5-e07fcbe492c9\triad_pillars_1793150440248.png) | ![Selected Work](C:\Users\areeb\.gemini\antigravity-ide\brain\31914ee3-2f6a-434e-86b5-e07fcbe492c9\chapter_02_projects_1793150448360.png) |
+| ![Blockchain Verification](./images/blockchain_verify.png) | ![Cogniverse Tactical](./images/cogniverse_tactical.png) |
 
-| Dedicated Project Briefing Page | Fullscreen Architectural Navigation |
+| Adaptive Puzzle AI | Adversarial Agent |
 |:---:|:---:|
-| ![Case Study](C:\Users\areeb\.gemini\antigravity-ide\brain\31914ee3-2f6a-434e-86b5-e07fcbe492c9\cogniverse_briefing_1793150477007.png) | ![Fullscreen Menu](C:\Users\areeb\.gemini\antigravity-ide\brain\31914ee3-2f6a-434e-86b5-e07fcbe492c9\fullscreen_menu_1793150505077.png) |
+| ![Puzzle AI](./images/proj_puzzle_ai.png) | ![AlphaBeta Agent](./images/proj_alphabeta.png) |
 
 ---
 
