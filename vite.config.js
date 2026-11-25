@@ -7,6 +7,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
+        editorial: resolve(__dirname, 'editorial.html'),
         cogniverseRpg: resolve(__dirname, 'projects/cogniverse-rpg.html'),
         cryptoDashboard: resolve(__dirname, 'projects/crypto-dashboard.html'),
         adaptiveDifficulty: resolve(__dirname, 'projects/adaptive-difficulty.html'),

@@ -1,20 +1,31 @@
-# 🏛️ Areeb Azhar — Architectural Portfolio (Beyond What You See)
+# 🏛️ Areeb Azhar — 3D Portfolio Archive Gallery & Editorial Showcase
 
 [![Live Demo](https://img.shields.io/badge/Live_Site-areeb--azhar.github.io%2Fportfolio--web-brightgreen?style=for-the-badge&logo=github)](https://areeb-azhar.github.io/portfolio-web/)
+[![Three.js](https://img.shields.io/badge/Three.js-WebGL_3D_Gallery-000000?style=for-the-badge&logo=threedotjs&logoColor=white)](https://threejs.org/)
 [![Vite](https://img.shields.io/badge/Vite-8.0-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vite.dev/)
 [![GSAP](https://img.shields.io/badge/GSAP-3.14-88CE02?style=for-the-badge&logo=greensock&logoColor=white)](https://greensock.com/)
 [![Lenis](https://img.shields.io/badge/Lenis-Smooth_Scroll-000000?style=for-the-badge)](https://github.com/darkroomengineering/lenis)
-[![Design](https://img.shields.io/badge/Aesthetic-Gazzar_Obsidian-e4e1d9?style=for-the-badge)](https://www.thisisgazzar.com/en)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](./LICENSE)
 
-> 🌐 **Live Website**: [https://areeb-azhar.github.io/portfolio-web/](https://areeb-azhar.github.io/portfolio-web/)
+> 🌐 **Live Website (3D Gallery Landing)**: [https://areeb-azhar.github.io/portfolio-web/](https://areeb-azhar.github.io/portfolio-web/)  
+> 📖 **2D Editorial Archive**: [https://areeb-azhar.github.io/portfolio-web/editorial.html](https://areeb-azhar.github.io/portfolio-web/editorial.html)
 
-An **Awwwards-caliber, museum-grade editorial digital experience** redesigned to match the aesthetic, interaction flow, and structural craftsmanship of **[Mohamed Elgazzar's portfolio (thisisgazzar.com)](https://www.thisisgazzar.com/en)**. Featuring deep obsidian tones (`#050505`), warm ivory typography (`#e4e1d9`), high-precision monospace accents, a Web Audio API micro-sound synthesizer, an optical perspective study, and **7 dedicated, museum-grade case study briefing pages**.
+An **interactive 3D Portfolio Archive Gallery** built with Three.js & WebGL, seamlessly connected to a preserved **Gazzar-inspired 2D Obsidian Editorial Portfolio** (`editorial.html`) and **7 dedicated technical case-study briefing pages** (`projects/*.html`).
+
+---
+
+## ✨ Recent Updates
+
+- **3D Portfolio Archive Gallery Landing Page (`index.html`)**: Replaced the root landing page with a walkable cinematic WebGL architectural hall showcasing 6 portfolio eras (2021–2026) with procedural canvas textures, floating pedestal sculptures, volumetric light shafts, floorplan radar minimap, cinema letterbox bars, Web Audio ambient pad, and an interactive Portfolio Inspector Modal.
+- **Preserved 2D Gazzar Editorial Portfolio (`editorial.html`)**: Preserved the full obsidian editorial experience as an accessible 2D archive linked from the 3D Gallery's Top HUD (`Editorial`), Splash Screen, Edition 05 (*Noir Cinema*), and WebGL fallback.
+- **Interactive Project Deep-Links (Desktop & Mobile)**: Featured project cards inside the 3D Inspector Modal link directly into the 7 full project case-study briefings with touch-friendly tap targets, `touch-action: none` 3D drag look, and responsive mobile HUD/D-Pad ergonomics.
+- **Three.js Performance & Memory Governance**: Reuses a single `CanvasTexture` for the monument wall, disposes previous GPU textures on live exhibit customization, hoists per-frame `THREE.Vector3` scratch objects outside `animate()` for zero GC stutter, and pauses rendering when the browser tab is hidden via `visibilitychange`.
 
 ---
 
 ## 📸 Visual Showcase
 
+### Project Screenshots
 | Cogniverse Cosmic View | CryptoTrader Dashboard |
 |:---:|:---:|
 | ![Cogniverse Cosmic](./images/cogniverse_cosmic.png) | ![Crypto Dashboard](./images/crypto_dashboard.png) |
@@ -27,57 +38,42 @@ An **Awwwards-caliber, museum-grade editorial digital experience** redesigned to
 |:---:|:---:|
 | ![Puzzle AI](./images/proj_puzzle_ai.png) | ![AlphaBeta Agent](./images/proj_alphabeta.png) |
 
+> 📷 **3D Gallery Screenshots**: Capture screenshots of the new 3D landing page (1. **Title Splash over the 3D Hall**, 2. **First-Person Walkthrough with Minimap & Monoliths**, and 3. **Interactive Portfolio Inspector Modal**) into `images/` to showcase the WebGL hall right here!
+
 ---
 
-## 🌟 Key Features & Workflow Architecture
+## 🌟 Experience Architecture & Features
 
-### 1. Preloader & Sound Gate
-- **Dynamic 00% → 100% Counter**: Smooth tabular readout with scaled SVG brand mark.
-- **Auditory Experience Choice**: Visitors can enter in **`QUIET`** mode or with **`SOUND`** enabled.
-- **Accessibility**: Includes a dedicated **`Reduce motion`** toggle.
+### 1. Interactive 3D Archive Gallery (`index.html`)
+- **Cinematic Title Splash**: Sweeping crane shot over the live 3D hall with **Enter Gallery**, **Cinematic Auto-Tour**, and a direct **2D Editorial Portfolio** switch.
+- **First-Person Exploration & Mobile Support**:
+  - **Desktop**: `WASD` / Arrow keys to walk, Click & Drag to look, Click monolith or press `E` to inspect, Keys `1`–`6` to jump between eras, `Esc` to close.
+  - **Mobile / Touch**: On-screen touch D-Pad, touch-drag camera look (`touch-action: none` preventing accidental pull-to-refresh), horizontal scrollable edition dock, and generous tap targets.
+- **Six Curated Portfolio Monoliths (2021–2026)**:
+  1. `ED. 01 (2021)` **Mono Terminal** — Command-Line Developer Archive
+  2. `ED. 02 (2022)` **Swiss Editorial** — International Typographic Grid
+  3. `ED. 03 (2023)` **Neo-Brutalist Lab** — Raw Borders & Kinetic Color
+  4. `ED. 04 (2024)` **Aurora Glass** — Luminous Bento & Frosted Depth (`bunetto.vercel.app`)
+  5. `ED. 05 (2025)` **Noir Cinema** — Monochrome Editorial Monograph (launches `./editorial.html`)
+  6. `ED. 06 (2026)` **Spatial Atelier** — Full-Stack Systems & 3D Flagship (`RustBot` & `IqraDegreeChain`)
+- **Live Exhibit Customizer**: Edit any exhibit's title, year, accent hex color, URL/path, or curatorial note inside the modal and watch the 3D monolith and wall plaque regenerate live (persisted in `localStorage` with proper GPU texture disposal).
+- **Web Audio Ambient Cinema Pad**: Toggleable warm multi-oscillator museum drone and chime feedback via Web Audio API.
+- **Graceful WebGL Fallback**: If WebGL is unavailable on a device, visitors are offered a direct one-click button to `./editorial.html`.
 
-### 2. Identity Hero & Minimalist Masthead
-- **Brand Monogram**: Geometric sliced-arc `AA` monogram that rotates smoothly on interaction.
-- **Floating Header**: Features dynamic role pills (`AI SYSTEMS & DISTRIBUTED ARCHITECTURE`), sound state toggle, fullscreen `MENU` switch, and rolling kinetic `Let's talk ↗` trigger.
-- **Interactive Visual Canvas**: Minimalist geometric orbital wireframe responding organically to cursor movement.
-- **Infinite Philosophy Marquee**: Continuous typography ticker delivering core architectural statements.
+### 2. 2D Editorial Portfolio (`editorial.html`)
+- **Preloader & Sound Gate**: `00% → 100%` counter with geometric `AA` monogram, `ENTER QUIETLY` / `ENTER WITH SOUND`, and `Reduce motion`.
+- **Optical Perspective & Triad Narrative**: 4 scroll-triggered optical beats leading into `PERSPECTIVE`, `CLARITY`, and `DIRECTION`.
+- **Fullscreen Architectural Menu**: Complete multi-layer visibility containment (`visibility: hidden`, `opacity: 0`, `overflow-y: auto`), Lenis scroll lock, live PKT clock, and direct link back to the `3D Archive Gallery`.
 
-### 3. Chapter 01: A Study in Perspective
-- **4 Optical Beats**:
-  - `01 / 04: Look a little deeper.` — Software as living logic beneath the surface.
-  - `02 / 04: A small shift.` — Moving from static code to continuous adaptation.
-  - `03 / 04: A whole new perspective.` — Where mathematical rigor merges with human intuition.
-  - `04 / 04: The details change everything.` — Sub-16ms neural execution and zero-entropy topologies.
-- **The Triad Pillars**: `PERSPECTIVE` · `CLARITY` · `DIRECTION`.
-- **Core Thesis**: *"Built on logic. Made to feel simple."*
-
-### 4. Chapter 02: Selected Work Showcase
-- **Continuous SVG Connector**: A single unbroken path tracing through all projects as the user scrolls.
-- **Curated 7-Project Engineering Roster**:
-  1. **Genesis Cogniverse 2D & 2.5D** (`projects/cogniverse-rpg.html`) — Godot 4 & Rust Living RPG Simulation with Infinite Axis Utility AI.
-  2. **CryptoTrader Terminal** (`projects/crypto-dashboard.html`) — Production React 19 & TradingView paper trading simulator.
-  3. **Adaptive Difficulty Engine** (`projects/adaptive-difficulty.html`) — Unity & C# real-time player telemetry and neural recalibration.
-  4. **On-Chain Credential Attestation** (`projects/blockchain-attestation.html`) — Hyperledger Fabric & Zero-Knowledge Privacy Sandbox.
-  5. **RustBot Autonomous Engine** (`projects/rustbot-engine.html`) — Pure Rust, Tokio, Axum, and local fuzzy vector memory store.
-  6. **Alpha-Beta Search Agent** (`projects/alpha-beta-agent.html`) — Adversarial AI decision engine with Minimax heuristic pruning.
-  7. **Amazing Giant Flowers** (`projects/giant-flowers.html`) — Custom Shopify Liquid luxury storefront & tailored digital commerce.
-
-### 5. Dedicated Project Case Study Pages (`projects/*.html`)
-Each project opens into its own dedicated briefing page adopting Gazzar’s 4-act structure:
-- **Context Matrix**: Client/Domain, Timeline, Role, Tech Stack, and Live Demo/Repo links.
-- **Act 01 (Starting Point)**: The fundamental problem and why standard solutions fail.
-- **Act 02 (Architecture in Practice)**: Interactive 3-step sequence + technical SVG data-flow diagrams.
-- **Act 03 (Engineering Deep Dive)**: Formulas, code logic, real screenshots, and benchmarks.
-- **Act 04 (Through Line & Impact)**: Quantified production metrics.
-- **Next Project Transition**: Seamless footer link continuing into the next system.
-
-### 6. Fullscreen Architectural Navigation Overlay
-- Fullscreen sliding curtain with high-contrast typography links (`01 HOME` to `05 CONTACT`).
-- Complete multi-layer visibility containment (`visibility: hidden`, `opacity: 0`, and `overflow-y: auto`) preventing menu item overflow or bleed-through when closed.
-- Automatic Lenis background scroll locking on menu open (`window.lenis.stop()` / `window.lenis.start()`).
-- Full keyboard accessibility with `Escape` dismiss and synchronized `aria-expanded` / `aria-hidden` states.
-- Live Pakistan Standard Time (PKT, UTC+5) clock ticking every second.
-- Status indicator: `● AVAILABLE FOR SELECT ROLES`.
+### 3. Seven Dedicated Project Case-Study Briefings (`projects/*.html`)
+Every project opens into a 4-act editorial briefing with context matrices, architecture SVG diagrams, benchmarks, and `← BACK TO PROJECTS` (`../editorial.html#work`) + logo (`../index.html`) navigation:
+1. **Genesis Cogniverse 2D & 2.5D** (`projects/cogniverse-rpg.html`) — Godot 4 & Rust Living RPG Simulation with Infinite Axis Utility AI.
+2. **CryptoTrader Terminal** (`projects/crypto-dashboard.html`) — React 19 & TradingView paper trading simulator.
+3. **Adaptive Difficulty Engine** (`projects/adaptive-difficulty.html`) — Unity & C# real-time player telemetry and neural recalibration.
+4. **On-Chain Credential Attestation** (`projects/blockchain-attestation.html`) — Hyperledger Fabric & Zero-Knowledge Privacy Sandbox.
+5. **RustBot Autonomous Engine** (`projects/rustbot-engine.html`) — Pure Rust, Tokio, Axum, SQLite, and local fuzzy vector memory store.
+6. **Alpha-Beta Search Agent** (`projects/alpha-beta-agent.html`) — Adversarial AI Minimax engine with heuristic pruning.
+7. **Amazing Giant Flowers** (`projects/giant-flowers.html`) — Custom Shopify Liquid luxury storefront & tailored digital commerce.
 
 ---
 
@@ -85,12 +81,12 @@ Each project opens into its own dedicated briefing page adopting Gazzar’s 4-ac
 
 | Category | Technology | Purpose |
 |---|---|---|
-| **Build & Bundler** | [Vite 8](https://vite.dev/) | Multi-Page Application (MPA) bundling with zero-jank HMR |
-| **Animation Engine** | [GSAP 3.14](https://greensock.com/) + ScrollTrigger | Timeline choreography, masked line reveals, and scrubbed SVG strokes |
-| **Smooth Scrolling** | [Lenis 1.3](https://github.com/darkroomengineering/lenis) | Momentum-based, hardware-accelerated smooth inertia scrolling |
-| **Audio Synthesis** | [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) | Programmatic tactile hover clicks (1400Hz) and resonant chimes (520Hz) |
-| **Typography** | Questrial, Syne, JetBrains Mono | Editorial modernist sans paired with precision monospace accents |
-| **Graphics** | Native HTML5 2D Canvas & Vector SVG | Zero-cost orbital wireframe and continuous vector connections |
+| **3D Graphics Engine** | [Three.js r128](https://threejs.org/) | Real-time WebGL architectural gallery, procedural canvas textures, collision detection |
+| **Utility Styling (3D HUD)** | [Tailwind CSS 3.4](https://tailwindcss.com/) + [Lucide Icons](https://lucide.dev/) | Glassmorphic HUD overlays, responsive inspector modal, touch controls |
+| **Build & Bundler** | [Vite 8](https://vite.dev/) | Multi-Page Application (MPA) bundling for all 9 HTML entry points |
+| **Editorial Motion** | [GSAP 3.14](https://greensock.com/) + [Lenis 1.3](https://github.com/darkroomengineering/lenis) | Smooth momentum scrolling, masked reveals, and scrubbed SVG strokes on `editorial.html` & case studies |
+| **Audio Synthesis** | [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) | Ambient museum drone pad (`index.html`) & tactile hover/click synthesis (`editorial.html`) |
+| **Typography** | Cormorant Garamond, Inter, Questrial, Syne, JetBrains Mono | Editorial serif/grotesque display paired with technical monospace |
 
 ---
 
@@ -98,51 +94,54 @@ Each project opens into its own dedicated briefing page adopting Gazzar’s 4-ac
 
 ```
 portfolio/
+├── .github/workflows/deploy.yml    # Automated GitHub Pages build & deployment on push to main
 ├── .gitignore                      # Git ignore rules for node_modules & dist
-├── index.html                      # Homepage: Preloader, Hero, Perspective, Work, Systems, Footer
-├── main.js                         # Main coordinator: Lenis, preloader, menu, clock, canvas, scroll triggers
-├── package.json                    # Scripts and dependencies (vite, gsap, lenis, three)
-├── style.css                       # Gazzar Obsidian design system & responsive layout
-├── vite.config.js                  # Rollup multi-page build configuration for all 8 HTML entry points
+├── index.html                      # Primary Landing: Interactive 3D Portfolio Archive Gallery (Three.js)
+├── editorial.html                  # Preserved 2D Gazzar Obsidian Editorial Portfolio
+├── main.js                         # Editorial coordinator: Lenis, preloader, menu, clock, orbital canvas
+├── style.css                       # Editorial & case-study Obsidian design system
+├── vite.config.js                  # Rollup MPA build config (base: '/portfolio-web/', 9 HTML inputs)
+├── package.json                    # Scripts and dependencies (vite, gsap, lenis, three, vanta)
 ├── js/
-│   ├── case-study.js               # Reusable script for project briefing pages (Lenis, aside spy, audio)
+│   ├── case-study.js               # Reusable case-study script (Lenis, scroll-spy aside, audio)
 │   ├── cursor.js                   # Precision magnetic cursor with lerp tracking
-│   └── sound.js                    # Web Audio API synthesizer for tactile clicks and chimes
+│   └── sound.js                    # Web Audio API micro-sound synthesizer
 ├── images/                         # Production project screenshots and media assets
-│   ├── blockchain_admin.png        # Hyperledger registrar admin console
-│   ├── blockchain_verify.png       # On-chain credential hash scanner
-│   ├── cogniverse_cosmic.png       # FastNoiseLite 128x128 cosmic world view
-│   ├── cogniverse_tactical.png     # Tactical village view with TileMapLayer
-│   ├── crypto_dashboard.png        # TradingView interactive candlestick terminal
-│   ├── crypto_login.png            # Session authentication modal
-│   ├── proj_alphabeta.png          # Alpha-Beta pruning decision tree
-│   ├── proj_puzzle_ai.png          # Unity real-time neural gameplay
-│   ├── proj_shopify.png            # Mobile product catalog
-│   └── shopify_landing_pdf.jpg     # Luxury storefront hero
-└── projects/                       # Dedicated Case Study Briefing Pages
-    ├── adaptive-difficulty.html    # Unity & C# Neural Game Telemetry Engine
-    ├── alpha-beta-agent.html       # Python Minimax Adversarial Heuristic Agent
-    ├── blockchain-attestation.html # Hyperledger Fabric On-Chain Attestation & ZK Sandbox
-    ├── cogniverse-rpg.html         # Godot 4 & Rust Living Sovereign RPG Engine
-    ├── crypto-dashboard.html       # React 19 & TradingView CryptoTrader Terminal
-    ├── giant-flowers.html          # Custom Shopify Liquid Luxury E-Commerce
-    └── rustbot-engine.html         # Pure Rust Tokio High-Concurrency Chat Engine
+│   ├── blockchain_admin.png
+│   ├── blockchain_verify.png
+│   ├── cogniverse_cosmic.png
+│   ├── cogniverse_tactical.png
+│   ├── crypto_dashboard.png
+│   ├── crypto_login.png
+│   ├── proj_alphabeta.png
+│   ├── proj_puzzle_ai.png
+│   ├── proj_shopify.png
+│   └── shopify_landing_pdf.jpg
+└── projects/                       # 7 Dedicated Case-Study Briefing Pages
+    ├── adaptive-difficulty.html
+    ├── alpha-beta-agent.html
+    ├── blockchain-attestation.html
+    ├── cogniverse-rpg.html
+    ├── crypto-dashboard.html
+    ├── giant-flowers.html
+    └── rustbot-engine.html
 ```
 
 ---
 
 ## 🚀 Foolproof Local Setup & Running Guide
 
-### Prerequisites
-- **Node.js**: Version 18.0.0 or higher ([Download Node.js](https://nodejs.org/))
-- **npm**: Version 9.0.0 or higher (bundled with Node.js)
+### Prerequisites & Environment Setup
+- **Node.js**: Version `18.0.0` or higher (CI uses Node `20`) — [Download Node.js](https://nodejs.org/)
+- **npm**: Version `9.0.0` or higher (bundled with Node.js)
+- **Browser**: Any modern desktop or mobile browser with WebGL enabled (automatic fallback to `editorial.html` if WebGL is disabled). No environment variables or `.env` files are required.
 
-### Installation Steps
+### Installation & Local Execution
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository-url>
-   cd portfolio
+   git clone https://github.com/AREEB-AZHAR/portfolio-web.git
+   cd portfolio-web
    ```
 
 2. **Install dependencies**:
@@ -154,28 +153,27 @@ portfolio/
    ```bash
    npm run dev
    ```
-   Open your browser and navigate to `http://localhost:3000/`.
+   Open `http://localhost:3000/portfolio-web/` (Vite automatically serves under the configured `base: '/portfolio-web/'` path).
 
 4. **Build for production**:
    ```bash
    npm run build
    ```
-   Vite will compile and optimize all 8 HTML pages, bundling assets into the `dist/` directory.
+   Vite bundles all 9 HTML entry points (`index.html`, `editorial.html`, and all 7 `projects/*.html`) into `dist/`.
 
-5. **Preview the production build**:
+5. **Preview the production build locally**:
    ```bash
    npm run preview
    ```
-   Serves the production bundle locally at `http://localhost:4173/`.
+   Open `http://localhost:4173/portfolio-web/` to inspect the exact GitHub Pages production bundle.
 
 ---
 
 ## 📐 Verification & Quality Assurance
 
-- **Multi-Page Compilation**: Validated with `npm run build` — compiles `index.html` and all 7 case studies with zero errors in &lt; 300ms.
-- **Cross-Route Navigation**: Tested with browser subagent — verified seamless transitions from homepage cards to `/projects/*.html` and reciprocal `← BACK TO PROJECTS` links.
-- **Web Audio Integration**: Validated on both `QUIET` and `SOUND` states with non-blocking audio context resumption.
-- **Responsive Layout**: Fluid down to 320px mobile screens with collapsible navigation drawers and touch-optimized tap targets.
+- **Multi-Page Build**: Validated via `npm run build` — all 9 HTML entry points and optimized assets build cleanly in ~400ms with 0 errors.
+- **Automated Link & Syntax Audit**: Verified all 58 internal relative links across `dist/index.html`, `dist/editorial.html`, and `dist/projects/*.html`, plus full JS syntax validation of the 3D gallery script.
+- **Three.js Resource Audit**: Verified single monument texture reuse, GPU texture `.dispose()` on live exhibit customization, hoisted `Vector3` scratch variables, and `visibilitychange` background pause.
 
 ---
 
@@ -184,4 +182,4 @@ portfolio/
 **Areeb Azhar**
 - **GitHub**: [@AREEB-AZHAR](https://github.com/AREEB-AZHAR)
 - **Email**: [areebazhar3@gmail.com](mailto:areebazhar3@gmail.com)
-- **Portfolio**: [Live Showcase](https://areeb-azhar.github.io/portfolio/)
+- **Live Portfolio**: [https://areeb-azhar.github.io/portfolio-web/](https://areeb-azhar.github.io/portfolio-web/)
